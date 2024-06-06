@@ -3,7 +3,7 @@ package admin_jar.font;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import manager_jar.Main.Admin;
+import admin_jar.Main.Admin;
 
 public class MainController {
 

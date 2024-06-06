@@ -3,7 +3,7 @@ package admin_jar.font;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import manager_jar.Main.Admin;
+import admin_jar.Main.Admin;
 
 import java.io.IOException;
 
@@ -30,9 +30,10 @@ public class AdminLoginController {
         //这里需要数据库
         //TODO
         //判断id是否为空
-        if(){
+       // if(){
 
-        }
+        //}
+
         new Admin().MainApp();
     }
 }
