@@ -1,4 +1,4 @@
-package manager_jar.Main;
+package admin_jar.Main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,8 +7,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import manager_jar.font.AdminLoginController;
-import manager_jar.font.MainController;
+import admin_jar.font.AdminLoginController;
+import admin_jar.font.MainController;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public class Admin extends Application {
     public void initlogin(){
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/manager_jar/fxml/login_manager.fxml"));
+            loader.setLocation(getClass().getResource("/admin_jar/fxml/login_manager.fxml"));
             AnchorPane root = loader.load();
             Scene scene = new Scene(root);
 
@@ -49,7 +49,7 @@ public class Admin extends Application {
 
     public void MainApp() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/manager_jar/fxml/main_manager.fxml"));
+        loader.setLocation(getClass().getResource("/admin_jar/fxml/main_manager.fxml"));
         AnchorPane root = loader.load();
         Scene scene = new Scene(root);
 
