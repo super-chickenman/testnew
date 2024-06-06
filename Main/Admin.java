@@ -1,5 +1,6 @@
-package manager_jar.Main;
+package admin_jar.Main;
 
+import admin_jar.font.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -7,8 +8,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import manager_jar.font.AdminLoginController;
-import manager_jar.font.MainController;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -23,14 +22,13 @@ public class Admin extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
         initlogin();
     }
 
     public void initlogin(){
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/manager_jar/fxml/login_manager.fxml"));
+            loader.setLocation(getClass().getResource("/admin_jar/fxml/login_manager.fxml"));
             AnchorPane root = loader.load();
             Scene scene = new Scene(root);
 
@@ -49,7 +47,7 @@ public class Admin extends Application {
 
     public void MainApp() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/manager_jar/fxml/main_manager.fxml"));
+        loader.setLocation(getClass().getResource("/admin_jar/fxml/main_manager.fxml"));
         AnchorPane root = loader.load();
         Scene scene = new Scene(root);
 
@@ -62,6 +60,72 @@ public class Admin extends Application {
         controller.setStage(regStage);
 
         regStage.show();
+    }
+
+    public void CourseField() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/admin_jar/fxml/add_Cou_manager.fxml"));
+        AnchorPane root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage regStage = new Stage();
+
+        regStage.setTitle("课程详情");
+        regStage.setScene(scene);
+
+        AddCouController controller = loader.getController();
+        controller.setStage(regStage);
+
+        regStage.show();
+    }
+    public void TeaField() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/admin_jar/fxml/add_Tea_manager.fxml"));
+        AnchorPane root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage regStage = new Stage();
+
+        regStage.setTitle("讲师详情");
+        regStage.setScene(scene);
+
+        AddTeaController controller = loader.getController();
+        controller.setStage(regStage);
+
+        regStage.show();
+    }
+    public void StuField() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/admin_jar/fxml/add_Stu_manager.fxml"));
+        AnchorPane root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage regStage = new Stage();
+
+        regStage.setTitle("学生详情");
+        regStage.setScene(scene);
+
+        AddStuController controller = loader.getController();
+        controller.setStage(regStage);
+
+        regStage.show();
+    }
+
+    public void ChangePassword() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/admin_jar/fxml/change_password.fxml"));
+        AnchorPane root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage regStage = new Stage();
+
+        regStage.setTitle("修改密码");
+        regStage.setScene(scene);
+
+        ChangePasswordController controller = loader.getController();
+        controller.setStage(regStage);
+
+        regStage.showAndWait();
     }
 
     public boolean showMessage(String title, String text, Alert.AlertType type, int I){
