@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -77,6 +78,6 @@
       <TextField fx:id="TeaTitle" layoutX="93.0" layoutY="365.0" prefHeight="23.0" prefWidth="306.0" />
       <TextField fx:id="TeaEmail" layoutX="94.0" layoutY="412.0" prefHeight="23.0" prefWidth="306.0" />
       <TextField fx:id="TeaAddress" layoutX="151.0" layoutY="461.0" prefHeight="23.0" prefWidth="254.0" />
-      <TextField fx:id="TeaSex" layoutX="93.0" layoutY="178.0" prefHeight="23.0" prefWidth="306.0" />
+      <ComboBox fx:id="TeaSex" layoutX="93.0" layoutY="178.0" onAction="#SexChooseEvent" prefHeight="23.0" prefWidth="306.0" promptText="请选择性别" visibleRowCount="2" />
    </children>
 </AnchorPane>
